@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliotheca - Book Catalog List</title>
+  <link rel="stylesheet" href="css/frame_left.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Catalog Header in Left Frame -->
+  <header class="catalog-header">
+    <div class="catalog-title-row">
+      <div class="catalog-title">
+        <i class="fa-solid fa-layer-group" style="color: #6366f1;"></i>
+        <span>Book Catalog</span>
+      </div>
+      <span class="catalog-count" id="bookCount">6 Volumes</span>
+    </div>
+
+    <!-- Live Search Input -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" id="searchInput" class="search-input" placeholder="Search title, author, topic..." autocomplete="off">
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="filter-tags">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="science">Science</button>
+      <button class="filter-btn" data-category="tech">Tech</button>
+      <button class="filter-btn" data-category="fantasy">Fantasy</button>
+      <button class="filter-btn" data-category="nature">Nature</button>
+      <button class="filter-btn" data-category="cyberpunk">Cyber</button>
+      <button class="filter-btn" data-category="philosophy">Philosophy</button>
+    </div>
+  </header>
+
+  <!-- Books List (Targeting rightFrame) -->
+  <div class="book-cards-list" id="booksContainer">
+
+    <!-- Book 1 -->
+    <a href="book1_quantum.html" target="rightFrame" class="book-card" data-category="science" data-title="the quantum enigma: physics & reality" data-author="dr. evelyn reed">
+      <div class="book-thumb-wrapper">
+        <img src="images/quantum_enigma.jpg" alt="The Quantum Enigma" class="book-thumb">
+        <span class="book-badge">#1 Science</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag">Quantum Physics</span>
+          <h3 class="book-title">The Quantum Enigma</h3>
+          <p class="book-author">Dr. Evelyn Reed</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.94</span>
+          <span class="book-price">$38.50</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Book 2 -->
+    <a href="book2_cloud.html" target="rightFrame" class="book-card" data-category="tech" data-title="architecting modern cloud systems" data-author="marcus vance">
+      <div class="book-thumb-wrapper">
+        <img src="images/cloud_systems.jpg" alt="Architecting Modern Cloud Systems" class="book-thumb">
+        <span class="book-badge" style="color: #38bdf8;">DevOps</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag" style="color: #06b6d4;">Cloud & Scale</span>
+          <h3 class="book-title">Architecting Cloud Systems</h3>
+          <p class="book-author">Marcus Vance</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.98</span>
+          <span class="book-price">$54.00</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Book 3 -->
+    <a href="book3_celestial.html" target="rightFrame" class="book-card" data-category="fantasy" data-title="chronicles of the celestial void" data-author="lyra thorne">
+      <div class="book-thumb-wrapper">
+        <img src="images/celestial_void.jpg" alt="Chronicles of the Celestial Void" class="book-thumb">
+        <span class="book-badge" style="color: #f59e0b;">Bestseller</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag" style="color: #f59e0b;">Epic Fantasy</span>
+          <h3 class="book-title">Celestial Void</h3>
+          <p class="book-author">Lyra Thorne</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.96</span>
+          <span class="book-price">$32.00</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Book 4 -->
+    <a href="book4_botanical.html" target="rightFrame" class="book-card" data-category="nature" data-title="the secret life of ancient flora" data-author="dr. alistair finch">
+      <div class="book-thumb-wrapper">
+        <img src="images/botanical_flora.jpg" alt="The Secret Life of Ancient Flora" class="book-thumb">
+        <span class="book-badge" style="color: #34d399;">Medal</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag" style="color: #10b981;">Botanical Science</span>
+          <h3 class="book-title">Ancient Flora</h3>
+          <p class="book-author">Dr. Alistair Finch</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.92</span>
+          <span class="book-price">$42.00</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Book 5 -->
+    <a href="book5_cyberpunk.html" target="rightFrame" class="book-card" data-category="cyberpunk" data-title="cybernetic dreams: mind, machine & society" data-author="elena rostova">
+      <div class="book-thumb-wrapper">
+        <img src="images/cybernetic_dreams.jpg" alt="Cybernetic Dreams" class="book-thumb">
+        <span class="book-badge" style="color: #f472b6;">Sci-Fi AI</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag" style="color: #ec4899;">Cyberpunk Ethics</span>
+          <h3 class="book-title">Cybernetic Dreams</h3>
+          <p class="book-author">Elena Rostova</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.95</span>
+          <span class="book-price">$36.00</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Book 6 -->
+    <a href="book6_philosophy.html" target="rightFrame" class="book-card" data-category="philosophy" data-title="the golden age of philosophy: ideas that shaped humanity" data-author="arthur sterling">
+      <div class="book-thumb-wrapper">
+        <img src="images/golden_philosophy.jpg" alt="The Golden Age of Philosophy" class="book-thumb">
+        <span class="book-badge" style="color: #fde68a;">Classic</span>
+      </div>
+      <div class="book-info-preview">
+        <div>
+          <span class="book-tag" style="color: #eab308;">Philosophy</span>
+          <h3 class="book-title">Golden Age of Philosophy</h3>
+          <p class="book-author">Arthur Sterling</p>
+        </div>
+        <div class="book-meta-row">
+          <span class="book-rating"><i class="fa-solid fa-star"></i> 4.97</span>
+          <span class="book-price">$45.00</span>
+          <span class="view-action">Info <i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Empty Search State -->
+  <div id="noResults" class="no-results">
+    <i class="fa-regular fa-face-frown"></i>
+    <p>No matching books found in catalog.</p>
+  </div>
+
+  <!-- Reset / Home Link for Right Frame -->
+  <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); text-align: center;">
+    <a href="book_default.html" target="rightFrame" style="font-size: 0.78rem; color: var(--text-muted); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+      <i class="fa-solid fa-house"></i> Reset Right Frame to Welcome View
+    </a>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const bookCards = document.querySelectorAll('.book-card');
+    const noResults = document.getElementById('noResults');
+    const countDisplay = document.getElementById('bookCount');
+
+    let activeFilter = 'all';
+
+    // Handle Active selection styling on card click
+    bookCards.forEach(card => {
+      card.addEventListener('click', function() {
+        bookCards.forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+      });
+    });
+
+    // Filtering logic
+    function filterBooks() {
+      const query = searchInput.value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      bookCards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const author = card.getAttribute('data-author') || '';
+        const category = card.getAttribute('data-category') || '';
+
+        const matchesQuery = !query || title.includes(query) || author.includes(query);
+        const matchesCategory = activeFilter === 'all' || category === activeFilter;
+
+        if (matchesQuery && matchesCategory) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      countDisplay.innerText = visibleCount + (visibleCount === 1 ? ' Volume' : ' Volumes');
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterBooks);
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        activeFilter = this.getAttribute('data-category');
+        filterBooks();
+      });
+    });
+  </script>
+
+</body>
+</html>

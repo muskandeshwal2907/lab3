@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Bibliotheca - Classic HTML Frameset Book Information</title>
+</head>
+
+<!--
+  Academic Standard Classic Frameset Implementation:
+  Splits screen into two parts:
+  - Left Part: cols="30%" containing books list (book_list.html)
+  - Right Part: cols="70%" containing book information (book_default.html initially, target="rightFrame")
+-->
+<frameset cols="30%, 70%" frameborder="1" border="3" bordercolor="#6366f1" framespacing="3">
+  <!-- Left frame: Books list -->
+  <frame src="book_list.html" name="leftFrame" scrolling="auto" marginwidth="8" marginheight="8" title="Book Catalog List">
+  
+  <!-- Right frame: Book information -->
+  <frame src="book_default.html" name="rightFrame" scrolling="auto" marginwidth="16" marginheight="16" title="Book Details Display">
+
+  <noframes>
+    <body style="font-family: sans-serif; background: #0b0f19; color: #fff; padding: 40px; text-align: center;">
+      <h2>Frames Required</h2>
+      <p>Your browser does not support frames. Please visit the <a href="index.html" style="color: #6366f1;">Modern HTML5 Split-Frame Portal</a>.</p>
+    </body>
+  </noframes>
+</frameset>
+</html>

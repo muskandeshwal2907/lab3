@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecting Modern Cloud Systems - Book Details</title>
+  <link rel="stylesheet" href="css/frame_right.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Frame Breadcrumb / Header Navigation -->
+  <div style="padding: 16px 48px 0 48px; display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto;">
+    <a href="book_default.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.82rem; display: flex; align-items: center; gap: 6px;">
+      <i class="fa-solid fa-arrow-left"></i> Return to Portal Overview
+    </a>
+    <span style="font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px;">
+      Frame Target: <strong style="color: #38bdf8;">rightFrame</strong> &bull; Volume #2
+    </span>
+  </div>
+
+  <!-- Hero Banner with 3D Book Cover -->
+  <header class="hero-backdrop" style="background: radial-gradient(circle at top right, rgba(6, 182, 212, 0.18), transparent 60%), #0d1424;">
+    <div class="book-hero-content">
+      <div class="hero-cover-container">
+        <div class="book-3d-wrapper" style="box-shadow: -10px 15px 30px rgba(0,0,0,0.6), 0 0 35px rgba(6, 182, 212, 0.25);">
+          <img src="images/cloud_systems.jpg" alt="Architecting Modern Cloud Systems Cover" class="book-hero-img">
+        </div>
+      </div>
+
+      <div class="hero-text-details">
+        <div class="badge-row">
+          <span class="genre-pill" style="background: rgba(6, 182, 212, 0.2); color: #67e8f9; border-color: rgba(6, 182, 212, 0.35);">Cloud & Distributed Systems</span>
+          <span class="award-pill"><i class="fa-solid fa-code"></i> O'Reilly Top Engineering Pick 2025</span>
+          <span style="font-size: 0.72rem; color: #10b981; font-weight: 600;"><i class="fa-solid fa-check-circle"></i> Available &bull; Hardcover + PDF</span>
+        </div>
+
+        <h1 class="hero-title">Architecting Modern Cloud Systems</h1>
+        <p class="hero-subtitle">Resilience, Event-Driven Topologies, and Multi-Region Scale</p>
+
+        <div class="author-line">
+          <span>By</span>
+          <span class="author-name">Marcus Vance</span>
+          <i class="fa-solid fa-circle-check verified-author" title="Verified Author"></i>
+          <span>&bull; Principal Cloud Architect, HyperScale Labs</span>
+        </div>
+
+        <div class="rating-price-bar">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>4.98</span>
+            <span class="rating-count">(2,810 ratings)</span>
+          </div>
+
+          <div class="price-display">
+            <span class="current-price">$54.00</span>
+            <span class="original-price">$65.00</span>
+            <span class="discount-tag">Save 17%</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary-action" style="background: linear-gradient(135deg, #0891b2, #0284c7);" onclick="showToast('Cloud engineering manual added to your active checkout.')">
+            <i class="fa-solid fa-cloud-arrow-down"></i> Borrow E-Book
+          </button>
+          <button class="btn-secondary-action" onclick="toggleSample()">
+            <i class="fa-solid fa-terminal"></i> Read Sample Chapter
+          </button>
+          <button class="btn-secondary-action" onclick="showToast('Added to Technical Wishlist!')">
+            <i class="fa-regular fa-heart"></i> Wishlist
+          </button>
+          <button class="btn-secondary-action" onclick="copyCitation()">
+            <i class="fa-solid fa-quote-right"></i> Cite (BibTeX)
+          </button>
+        </div>
+
+        <!-- Sample Reader Drawer -->
+        <div id="sampleDrawer" class="sample-drawer">
+          <div class="sample-header">
+            <h4 style="font-family: var(--font-display); color: #fff; font-size: 0.95rem;">
+              <i class="fa-solid fa-terminal" style="color: #06b6d4; margin-right: 6px;"></i>
+              Chapter 3: Zero-Trust Gossip Protocols and Partition Tolerances (Excerpt)
+            </h4>
+            <button class="sample-close" onclick="toggleSample()">&times;</button>
+          </div>
+          <p class="sample-text">
+            "When designing for planetary-scale latency, the assumption of network synchrony is the root of catastrophic cascading failure. In distributed Raft consensus clusters spanning across transatlantic subsea cables, TCP handshake jitter and transient BGP route flapping demand anti-entropy gossip layers. In this chapter, we dissect how modern state machines maintain linearizability while shedding redundant heartbeats..."
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Information Container -->
+  <main class="main-info-container">
+    
+    <!-- Left Column: Synopsis, Chapters, Highlights -->
+    <div class="info-main-col">
+      
+      <!-- Synopsis Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-network-wired"></i> Engineering Architecture Overview
+        </h2>
+        <p class="synopsis-text">
+          <em>Architecting Modern Cloud Systems</em> is the definitive, battle-tested blueprint for designing, deploying, and governing mission-critical distributed infrastructures. Written by Marcus Vance, who has spearheaded distributed cloud architectures serving billions of daily active API calls, this handbook dissects the hard tradeoffs of modern cloud engineering.
+        </p>
+        <p class="synopsis-text">
+          Through in-depth production post-mortems, real-world Go & Rust architecture benchmarks, and exhaustive architectural blueprints, Vance covers Kubernetes orchestration internals, gRPC streaming, zero-trust service meshes, distributed tracing, and automated chaos engineering drills.
+        </p>
+
+        <!-- Highlights Grid -->
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <i class="fa-solid fa-shield-halved highlight-icon" style="color: #06b6d4;"></i>
+            <div class="highlight-text">
+              <strong>Zero-Trust Mesh Networks</strong>
+              <p>Mutual TLS, SPIFFE/SPIRE identity attestation, and cryptographically verified microservices.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-server highlight-icon" style="color: #06b6d4;"></i>
+            <div class="highlight-text">
+              <strong>Multi-Cloud Active-Active</strong>
+              <p>Designing multi-region database failovers across AWS, GCP, and Azure with sub-second replication.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-bolt highlight-icon" style="color: #06b6d4;"></i>
+            <div class="highlight-text">
+              <strong>Event-Driven Pipelines</strong>
+              <p>Ultra-low-latency event streaming via Apache Kafka, Pulsar, and decentralized message logs.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-bug-slash highlight-icon" style="color: #06b6d4;"></i>
+            <div class="highlight-text">
+              <strong>Automated Chaos Testing</strong>
+              <p>Injecting latency, simulated zone outages, and split-brain recovery testing in CI/CD.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table of Contents Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-layer-group"></i> Architectural Curriculum
+        </h2>
+        <div class="toc-list">
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num" style="color: #06b6d4;">CH 01</span>
+              <span>Fundamentals of Distributed Systems & PACELC Tradeoffs</span>
+            </div>
+            <span class="toc-pages">pp. 1 – 48</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num" style="color: #06b6d4;">CH 02</span>
+              <span>Event-Sourcing, CQRS, and Log-Structured Message Storage</span>
+            </div>
+            <span class="toc-pages">pp. 49 – 112</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num" style="color: #06b6d4;">CH 03</span>
+              <span>Zero-Trust Service Meshes & mTLS Protocol Internals</span>
+            </div>
+            <span class="toc-pages">pp. 113 – 198</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num" style="color: #06b6d4;">CH 04</span>
+              <span>Multi-Region Storage: Spanner, CockroachDB & Consensus</span>
+            </div>
+            <span class="toc-pages">pp. 199 – 286</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num" style="color: #06b6d4;">CH 05</span>
+              <span>FinOps & Kubernetes Autoscaling at Terabyte Scales</span>
+            </div>
+            <span class="toc-pages">pp. 287 – 376</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Critical Acclaim Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-comment-dots"></i> Industry Reviews
+        </h2>
+        
+        <div class="review-card" style="border-left-color: #06b6d4;">
+          <p class="review-quote">"If you're building systems that cannot afford a second of downtime, this book is mandatory reading. Marcus covers everything from consensus algorithms to FinOps budgeting with unmatched clarity."</p>
+          <div class="review-source" style="color: #38bdf8;">&mdash; Cloud Engineering Quarterly</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Right Sidebar Column: Specifications & Author Bio -->
+    <div class="info-side-col">
+      
+      <!-- Specifications Box -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-microchip" style="color: #06b6d4;"></i> Technical Specifications
+        </h3>
+        
+        <div class="spec-list">
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-barcode"></i> ISBN-13</span>
+            <span class="spec-val">978-1-49-204381-8</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-file-lines"></i> Page Count</span>
+            <span class="spec-val">580 Pages</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-building"></i> Publisher</span>
+            <span class="spec-val">HyperScale Tech Press</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-calendar"></i> Pub. Date</span>
+            <span class="spec-val">January 2025</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-code-branch"></i> Git Repo</span>
+            <span class="spec-val" style="color: #38bdf8;">Included (140+ Labs)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-cube"></i> Code Format</span>
+            <span class="spec-val">Go 1.23 / Rust / K8s</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Author Card -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 16px;">
+          Author Profile
+        </h3>
+        <div class="author-card">
+          <div class="author-avatar" style="background: linear-gradient(135deg, #0891b2, #4f46e5);">MV</div>
+          <div class="author-info">
+            <h4>Marcus Vance</h4>
+            <p>Distinguished Cloud Architect with 18+ years building hyperscale streaming infrastructure. Keynote speaker at KubeCon & AWS re:Invent.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Community Rating Box -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 14px;">
+          Reader Rating Score
+        </h3>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <span style="font-size: 2.2rem; font-weight: 800; color: #fff; font-family: var(--font-display);">4.98</span>
+          <div>
+            <div style="color: #f59e0b; font-size: 0.95rem;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div style="font-size: 0.76rem; color: var(--text-muted);">99% engineering recommendation</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="toast" class="toast-notice"></div>
+
+  <script>
+    function toggleSample() {
+      const drawer = document.getElementById('sampleDrawer');
+      drawer.classList.toggle('open');
+      if (drawer.classList.contains('open')) {
+        drawer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+
+    function copyCitation() {
+      const citation = `@book{vance2025cloud,\n  title={Architecting Modern Cloud Systems},\n  author={Vance, Marcus},\n  publisher={HyperScale Tech Press},\n  year={2025},\n  isbn={978-1-49-204381-8}\n}`;
+      navigator.clipboard.writeText(citation).then(() => {
+        showToast('BibTeX citation copied to clipboard!');
+      });
+    }
+  </script>
+
+</body>
+</html>

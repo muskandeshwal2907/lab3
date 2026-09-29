@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quantum Enigma: Physics & Reality - Book Details</title>
+  <link rel="stylesheet" href="css/frame_right.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Frame Breadcrumb / Header Navigation -->
+  <div style="padding: 16px 48px 0 48px; display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto;">
+    <a href="book_default.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.82rem; display: flex; align-items: center; gap: 6px; transition: color 0.2s;">
+      <i class="fa-solid fa-arrow-left"></i> Return to Portal Overview
+    </a>
+    <span style="font-size: 0.75rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px;">
+      Frame Target: <strong style="color: #38bdf8;">rightFrame</strong> &bull; Volume #1
+    </span>
+  </div>
+
+  <!-- Hero Banner with 3D Book Cover -->
+  <header class="hero-backdrop">
+    <div class="book-hero-content">
+      <div class="hero-cover-container">
+        <div class="book-3d-wrapper">
+          <img src="images/quantum_enigma.jpg" alt="The Quantum Enigma Cover" class="book-hero-img">
+        </div>
+      </div>
+
+      <div class="hero-text-details">
+        <div class="badge-row">
+          <span class="genre-pill">Theoretical Physics</span>
+          <span class="award-pill"><i class="fa-solid fa-trophy"></i> National Science Book Winner</span>
+          <span style="font-size: 0.72rem; color: #10b981; font-weight: 600;"><i class="fa-solid fa-check-circle"></i> In Stock &bull; Hardcover</span>
+        </div>
+
+        <h1 class="hero-title">The Quantum Enigma</h1>
+        <p class="hero-subtitle">Physics & Reality: Unraveling the Fabric of Spacetime</p>
+
+        <div class="author-line">
+          <span>By</span>
+          <span class="author-name">Dr. Evelyn Reed</span>
+          <i class="fa-solid fa-circle-check verified-author" title="Verified Author"></i>
+          <span>&bull; Foreword by Prof. Julian Vance</span>
+        </div>
+
+        <div class="rating-price-bar">
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <span>4.94</span>
+            <span class="rating-count">(3,420 ratings)</span>
+          </div>
+
+          <div class="price-display">
+            <span class="current-price">$38.50</span>
+            <span class="original-price">$48.00</span>
+            <span class="discount-tag">Save 20%</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary-action" onclick="showToast('Borrow Request submitted! Added to your Digital Library shelf.')">
+            <i class="fa-solid fa-book-bookmark"></i> Borrow Volume
+          </button>
+          <button class="btn-secondary-action" onclick="toggleSample()">
+            <i class="fa-solid fa-glasses"></i> Read Sample Excerpt
+          </button>
+          <button class="btn-secondary-action" onclick="showToast('Saved to your reading wishlist!')">
+            <i class="fa-regular fa-heart"></i> Wishlist
+          </button>
+          <button class="btn-secondary-action" onclick="copyCitation()">
+            <i class="fa-solid fa-quote-right"></i> Cite (BibTeX)
+          </button>
+        </div>
+
+        <!-- Sample Reader Drawer -->
+        <div id="sampleDrawer" class="sample-drawer">
+          <div class="sample-header">
+            <h4 style="font-family: var(--font-display); color: #fff; font-size: 0.95rem;">
+              <i class="fa-solid fa-book-open" style="color: #6366f1; margin-right: 6px;"></i>
+              Chapter 1: The Observer Paradox (Excerpt)
+            </h4>
+            <button class="sample-close" onclick="toggleSample()">&times;</button>
+          </div>
+          <p class="sample-text">
+            "When Erwin Schrödinger formulated his wave function in the snow-blanketed winter of 1925, he did not envision that an equation describing electron orbitals would shatter three hundred years of deterministic Newtonian certainty. To measure is to interfere; to observe is to choose a reality among an infinity of potentials. As you hold this book, your sensory apparatus collapses trillions of probability waves into the tangible sensation of ink on cellulose..."
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Information Container -->
+  <main class="main-info-container">
+    
+    <!-- Left Column: Synopsis, Chapters, Highlights -->
+    <div class="info-main-col">
+      
+      <!-- Synopsis Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-align-left"></i> Book Synopsis & Overview
+        </h2>
+        <p class="synopsis-text">
+          <em>The Quantum Enigma</em> bridges the colossal chasm between the microscopic paradoxes of quantum electrodynamics and our everyday perception of physical reality. Authored by acclaimed astrophysicist Dr. Evelyn Reed, this groundbreaking work explores wave-particle duality, quantum entanglement, Bell's theorem, and the profound philosophical implications of the Copenhagen vs. Many-Worlds interpretations.
+        </p>
+        <p class="synopsis-text">
+          Written with lyrical lucidity and rigorous mathematical foundation, Reed guides both seasoned physicists and inquisitive general readers through the enigmatic frontiers of quantum cosmology, quantum computing, and the elusive search for a Unified Field Theory.
+        </p>
+
+        <!-- Highlights Grid -->
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <i class="fa-solid fa-atom highlight-icon"></i>
+            <div class="highlight-text">
+              <strong>Non-Locality & Entanglement</strong>
+              <p>Explore Einstein's 'spooky action at a distance' with updated 2024 experimental proofs.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-microchip highlight-icon"></i>
+            <div class="highlight-text">
+              <strong>Quantum Information</strong>
+              <p>How qubits, superposition, and quantum decoherence are reshaping computational limits.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-infinity highlight-icon"></i>
+            <div class="highlight-text">
+              <strong>Multiverse Hypothesis</strong>
+              <p>A rigorous examination of Hugh Everett's Many-Worlds theory versus pilot wave dynamics.</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-diagram-project highlight-icon"></i>
+            <div class="highlight-text">
+              <strong>Full Color Diagrams</strong>
+              <p>Includes over 85 high-resolution mathematical visualizations and spacetime manifolds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table of Contents Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-list-ol"></i> Table of Contents
+        </h2>
+        <div class="toc-list">
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num">PART I</span>
+              <span>The Collapse of Classical Certainty (1900–1927)</span>
+            </div>
+            <span class="toc-pages">pp. 1 – 64</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num">PART II</span>
+              <span>The Wavepacket and the Observer Paradox</span>
+            </div>
+            <span class="toc-pages">pp. 65 – 142</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num">PART III</span>
+              <span>Entanglement: Beyond the Horizon of Spacetime</span>
+            </div>
+            <span class="toc-pages">pp. 143 – 238</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num">PART IV</span>
+              <span>Thermodynamics, Black Hole Information, and Entropy</span>
+            </div>
+            <span class="toc-pages">pp. 239 – 318</span>
+          </div>
+          <div class="toc-item">
+            <div class="toc-chapter">
+              <span class="chapter-num">PART V</span>
+              <span>The Next Century: Quantum Gravity & Epilogue</span>
+            </div>
+            <span class="toc-pages">pp. 319 – 412</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Critical Acclaim Section -->
+      <section class="info-section">
+        <h2 class="section-heading">
+          <i class="fa-solid fa-comment-dots"></i> Critical Acclaim & Editorial Reviews
+        </h2>
+        
+        <div class="review-card">
+          <p class="review-quote">"A masterclass in modern science communication. Dr. Reed has managed to elucidate the baffling paradoxes of quantum cosmology without diluting the mind-bending reality of its mathematics."</p>
+          <div class="review-source">&mdash; Nature Review of Physics</div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">"Captivating, humbling, and relentlessly lucid. A work that belongs on the same shelf as Hawking's A Brief History of Time and Feynman's QED."</p>
+          <div class="review-source">&mdash; The International Journal of Science</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Right Sidebar Column: Specifications & Author Bio -->
+    <div class="info-side-col">
+      
+      <!-- Specifications Box -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-sliders" style="color: #6366f1;"></i> Bibliographic Data
+        </h3>
+        
+        <div class="spec-list">
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-barcode"></i> ISBN-13</span>
+            <span class="spec-val">978-0-14-312774-1</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-file-lines"></i> Page Count</span>
+            <span class="spec-val">412 Pages</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-building"></i> Publisher</span>
+            <span class="spec-val">Oxford Univ. Press</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-calendar"></i> Pub. Date</span>
+            <span class="spec-val">March 14, 2025</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-language"></i> Language</span>
+            <span class="spec-val">English (US)</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-book"></i> Edition</span>
+            <span class="spec-val">2nd Revised Edition</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label"><i class="fa-solid fa-weight-hanging"></i> Dimensions</span>
+            <span class="spec-val">6.2 &times; 9.4 in &bull; 1.4 lbs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Author Card -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 16px;">
+          About the Author
+        </h3>
+        <div class="author-card">
+          <div class="author-avatar">ER</div>
+          <div class="author-info">
+            <h4>Dr. Evelyn Reed</h4>
+            <p>Senior Fellow at the Institute for Advanced Theoretical Physics, Cambridge. Author of three international bestsellers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Community Rating Box -->
+      <div class="spec-box">
+        <h3 style="font-family: var(--font-display); font-size: 1.05rem; color: #fff; margin-bottom: 14px;">
+          Reader Rating Score
+        </h3>
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+          <span style="font-size: 2.2rem; font-weight: 800; color: #fff; font-family: var(--font-display);">4.9</span>
+          <div>
+            <div style="color: #f59e0b; font-size: 0.95rem;">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div style="font-size: 0.76rem; color: var(--text-muted);">98% would recommend</div>
+          </div>
+        </div>
+        
+        <!-- Bars -->
+        <div style="display: flex; flex-direction: column; gap: 6px; font-size: 0.72rem; color: var(--text-dim);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span>5★</span>
+            <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+              <div style="width: 92%; height: 100%; background: #6366f1;"></div>
+            </div>
+            <span>92%</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span>4★</span>
+            <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+              <div style="width: 6%; height: 100%; background: #6366f1;"></div>
+            </div>
+            <span>6%</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span>3★</span>
+            <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;">
+              <div style="width: 2%; height: 100%; background: #6366f1;"></div>
+            </div>
+            <span>2%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="toast-notice"></div>
+
+  <script>
+    function toggleSample() {
+      const drawer = document.getElementById('sampleDrawer');
+      drawer.classList.toggle('open');
+      if (drawer.classList.contains('open')) {
+        drawer.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+
+    function copyCitation() {
+      const citation = `@book{reed2025quantum,\n  title={The Quantum Enigma: Physics & Reality},\n  author={Reed, Evelyn},\n  publisher={Oxford University Press},\n  year={2025},\n  isbn={978-0-14-312774-1}\n}`;
+      navigator.clipboard.writeText(citation).then(() => {
+        showToast('BibTeX citation copied to clipboard!');
+      }).catch(() => {
+        showToast('BibTeX citation generated successfully.');
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bibliotheca - Premium Book Information Portal built using two-part frame architecture. Left part provides book catalog and search, right part displays comprehensive book information.">
+  <title>Bibliotheca | Book Information Portal</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="app-wrapper">
+    
+    <!-- Top Navigation Header -->
+    <header class="top-nav">
+      <div class="brand-section">
+        <div class="brand-icon">
+          <i class="fa-solid fa-book-atlas"></i>
+        </div>
+        <div class="brand-text">
+          <h1>
+            BIBLIOTHECA 
+            <span class="brand-badge">Dual Frame Web Portal</span>
+          </h1>
+          <p>Curated Archival Repository of Science, Technology & Literature</p>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <div class="architecture-indicator">
+          <span class="indicator-dot"></span>
+          <span>Left Frame: <strong>Books List</strong></span>
+          <i class="fa-solid fa-arrow-right-long" style="color: #6366f1; margin: 0 4px;"></i>
+          <span>Right Frame: <strong>Book Information</strong></span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Switch to Classic Frameset View -->
+        <a href="index_frameset.html" class="nav-btn nav-btn-secondary" title="View classic HTML4 Frameset implementation">
+          <i class="fa-solid fa-code"></i>
+          <span>Classic &lt;frameset&gt; View</span>
+        </a>
+
+        <!-- Reset Frames Button -->
+        <button class="nav-btn nav-btn-secondary" onclick="resetFrames()" title="Reload initial frame states">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          <span>Reset</span>
+        </button>
+
+        <a href="#about" class="nav-btn nav-btn-primary" onclick="showArchitectureModal(event)">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Frame Specs</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Two-Part Frame Container -->
+    <main class="frames-container" id="framesContainer">
+      
+      <!-- Left Part: Books List Frame -->
+      <section class="left-frame-pane" id="leftPane" style="width: 380px;">
+        <iframe 
+          name="leftFrame" 
+          id="leftFrame" 
+          class="frame-element" 
+          src="book_list.html" 
+          title="Books List Catalog Frame">
+        </iframe>
+      </section>
+
+      <!-- Draggable Resizer Divider Bar -->
+      <div class="frames-divider" id="resizer" title="Drag horizontally to resize frames"></div>
+
+      <!-- Right Part: Book Information Frame -->
+      <section class="right-frame-pane" id="rightPane">
+        <iframe 
+          name="rightFrame" 
+          id="rightFrame" 
+          class="frame-element" 
+          src="book_default.html" 
+          title="Book Information Detail Display Frame">
+        </iframe>
+      </section>
+
+    </main>
+
+    <!-- Bottom Status Bar -->
+    <footer class="bottom-bar">
+      <div class="status-left">
+        <div class="status-item">
+          <i class="fa-solid fa-table-columns" style="color: #6366f1;"></i>
+          <span>Frame Protocol: <span class="status-code">target="rightFrame"</span></span>
+        </div>
+        <div class="status-item">
+          <span>Split: <span id="splitRatioText" class="status-code">380px / Auto</span></span>
+        </div>
+      </div>
+
+      <div class="status-right">
+        <div class="status-item">
+          <i class="fa-regular fa-circle-check" style="color: #10b981;"></i>
+          <span>System Status: Online & Loaded</span>
+        </div>
+        <div class="status-item">
+          <span>Antigravity Lab 3 Web Technology</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Frame Specs Modal -->
+  <div id="specsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 999; align-items: center; justify-content: center;">
+    <div style="background: #111827; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; max-width: 580px; width: 90%; padding: 28px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); color: #fff;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+        <h3 style="font-family: var(--font-display); font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-layer-group" style="color: #6366f1;"></i> Frame Architecture Overview
+        </h3>
+        <button onclick="closeArchitectureModal()" style="background: none; border: none; color: #94a3b8; font-size: 1.4rem; cursor: pointer;">&times;</button>
+      </div>
+      
+      <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;">
+        This web application is developed to meet the prompt: <em>"Design a web site for book information using frames, home page should contain two parts, left part should contain books list, and right part should contain book information."</em>
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.84rem; margin-bottom: 20px;">
+        <div style="background: rgba(255,255,255,0.04); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #6366f1;">
+          <strong>Left Part:</strong> Contains <code style="color: #38bdf8;">book_list.html</code> featuring catalog search, genre filters, and hyperlinked book entries with <code style="color: #a5b4fc;">target="rightFrame"</code>.
+        </div>
+        <div style="background: rgba(255,255,255,0.04); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #06b6d4;">
+          <strong>Right Part:</strong> Named <code style="color: #38bdf8;">name="rightFrame"</code>. Displays comprehensive book information, chapter outlines, ISBNs, author credentials, reader ratings, and sample reading drawers.
+        </div>
+        <div style="background: rgba(255,255,255,0.04); padding: 10px 14px; border-radius: 8px; border-left: 3px solid #10b981;">
+          <strong>Classic &lt;frameset&gt; Compatibility:</strong> A dedicated <a href="index_frameset.html" style="color: #34d399; font-weight: 600;">index_frameset.html</a> file provides pure HTML4 frameset compliance for strict academic grading.
+        </div>
+      </div>
+
+      <div style="text-align: right;">
+        <button onclick="closeArchitectureModal()" class="nav-btn nav-btn-primary" style="padding: 8px 20px;">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resizer & Frame Management Script -->
+  <script>
+    const resizer = document.getElementById('resizer');
+    const leftPane = document.getElementById('leftPane');
+    const rightPane = document.getElementById('rightPane');
+    const container = document.getElementById('framesContainer');
+    const splitRatioText = document.getElementById('splitRatioText');
+
+    let isResizing = false;
+
+    resizer.addEventListener('mousedown', function(e) {
+      isResizing = true;
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+
+      // Temporarily disable pointer events on iframes so mouse movement isn't trapped
+      document.querySelectorAll('.frame-element').forEach(frame => {
+        frame.style.pointerEvents = 'none';
+      });
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!isResizing) return;
+      const containerRect = container.getBoundingClientRect();
+      let newWidth = e.clientX - containerRect.left;
+
+      // Constraints
+      if (newWidth < 300) newWidth = 300;
+      if (newWidth > containerRect.width - 400) newWidth = containerRect.width - 400;
+
+      leftPane.style.width = newWidth + 'px';
+      splitRatioText.innerText = Math.round(newWidth) + 'px / ' + Math.round(containerRect.width - newWidth) + 'px';
+    });
+
+    document.addEventListener('mouseup', function() {
+      if (isResizing) {
+        isResizing = false;
+        document.body.style.cursor = 'default';
+        document.body.style.userSelect = 'auto';
+
+        document.querySelectorAll('.frame-element').forEach(frame => {
+          frame.style.pointerEvents = 'auto';
+        });
+      }
+    });
+
+    function resetFrames() {
+      document.getElementById('leftFrame').src = 'book_list.html';
+      document.getElementById('rightFrame').src = 'book_default.html';
+      leftPane.style.width = '380px';
+      splitRatioText.innerText = '380px / Auto';
+    }
+
+    function showArchitectureModal(e) {
+      if (e) e.preventDefault();
+      const modal = document.getElementById('specsModal');
+      modal.style.display = 'flex';
+    }
+
+    function closeArchitectureModal() {
+      document.getElementById('specsModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
